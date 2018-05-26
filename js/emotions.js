@@ -7,10 +7,6 @@ canvas.height = window.innerHeight;
 //stand for context
 const c = canvas.getContext('2d');
 canvas.style.background = "white";
-const mouse = {
-   x: undefined,
-   y: undefined
-};
 // anger - gravity :
 const gravity = 2;
 
@@ -54,11 +50,6 @@ const disguestColor = [
 ];
 
 
-window.addEventListener('mousemove',
-  function(event){
-  mouse.x = event.x;
-  mouse.y = event.y;
-});
 window.addEventListener('resize',
   function(){
     canvas.width = window.innerWidth;
@@ -573,31 +564,25 @@ function checkEmotion(){
    if (emotionTarget == 'sad') {
      sad();
      document.getElementById('emotion').innerText = "Why be sad?";
-     console.log('sad');
    }
    if (emotionTarget == 'disgust'){
      disgust();
      document.getElementById('emotion').innerText = "What disgust you?";
-     console.log('disgust');
    }
    if(emotionTarget == 'fear'){
      fear();
      document.getElementById('emotion').innerText = "Don't be fear!";
-     console.log('fear');
    }
    if(emotionTarget == 'surprise'){
-     document.getElementById('emotion').innerText = "Oh suprise!";
      surprise();
-     console.log('surprise');
+     document.getElementById('emotion').innerText = "Oh suprise!";
    }
    if(emotionTarget == 'anger'){
      anger();
      document.getElementById('emotion').innerText = "Calm Down!";
-     console.log('anger');
    }
    if(emotionTarget == ''){
      document.getElementById('emotion').innerText = "To be continued...";
-     console.log("stop");
    }
 }
 

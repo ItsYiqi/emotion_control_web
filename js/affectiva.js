@@ -113,7 +113,5 @@ detector.addEventListener("onImageResultsSuccess", function(faces, image, timest
     }
     emotionTarget = emotionArray[max].emotion;
 
-
-
   }
 });
