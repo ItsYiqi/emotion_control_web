@@ -2,34 +2,40 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Canvas Resize</title>
-    <style type="text/css">
-      canvas {
-        border: 1px solid black;
-        position: absolute;
-        z-index: -1;
-      }
-      body{
-        margin: 0;
-      }
-    </style>
+    <title>Emotion Control</title>
+    <link rel="stylesheet" href="./vender/bootstrap.min.css">
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin|Caveat+Brush" rel="stylesheet">
+
   </head>
   <body>
-    <canvas>
-    </canvas>
-    <button id = 'suprise'>suprise</button>
-    <button id = 'anger'>anger</button>
-    <button id = 'sadness'>sadness</button>
-    <button id = 'happiness'>happiness</button>
+    <div id="container">
+        <canvas id= "animation" ></canvas>
+        <div  id="affdex_elements" ></div>
+        <div id="logs"></div>
+    </div>
+
+    <div class="buttons">
+      <p id = "emotion">Get Started!</p>
+      <button type="button" class="btn btn-light " id ="start" onclick="onStart()">START</button>
+      <button type="button" class="btn btn-light" id ="stop" onclick="onStop()">STOP</button>
+      <button type="button" class="btn btn-light" id ="reset" onclick="onReset()">RESET</button>
+    </div>
+
 
 
 
   </body>
   <footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://download.affectiva.com/js/3.2/affdex.js"/></script>
+    <script scr='js/jquery.tobiieyeX.js'></script>
+    <script src='vender/sweep.min.js'></script>
     <script src='js/utility.js'></script>
-    <script src='js/suprise.js'></script>
+    <script src='js/affectiva.js'></script>
+    <script src='js/emotions.js'></script>
+
+
   </footer>
 
 </html>
