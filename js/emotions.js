@@ -563,15 +563,15 @@ function checkEmotion(){
    }
    if (emotionTarget == 'sad') {
      sad();
-     document.getElementById('emotion').innerText = "Why be sad?";
+     document.getElementById('emotion').innerText = "Why are you sad?";
    }
    if (emotionTarget == 'disgust'){
      disgust();
-     document.getElementById('emotion').innerText = "What disgust you?";
+     document.getElementById('emotion').innerText = "What disgusts you?";
    }
    if(emotionTarget == 'fear'){
      fear();
-     document.getElementById('emotion').innerText = "Don't be fear!";
+     document.getElementById('emotion').innerText = "Don't be scared!";
    }
    if(emotionTarget == 'surprise'){
      surprise();
@@ -579,11 +579,12 @@ function checkEmotion(){
    }
    if(emotionTarget == 'anger'){
      anger();
-     document.getElementById('emotion').innerText = "Calm Down!";
+     document.getElementById('emotion').innerText = "Don't be so angry!";
    }
    if(emotionTarget == ''){
      document.getElementById('emotion').innerText = "To be continued...";
    }
+   console.log(emotionArray);
 }
 
 setInterval(checkEmotion, 5000);

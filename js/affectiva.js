@@ -1,6 +1,7 @@
 // SDK Needs to create video and canvas nodes in the DOM in order to function
 // Here we are adding those nodes a predefined div.
 // const canvas = document.getElementById('animation');
+var emotionArray;
 var divRoot = $("#affdex_elements")[0];
 var width = 0;
 var height = 0;
@@ -72,7 +73,7 @@ detector.addEventListener("onStopSuccess", function() {
 //Faces object contains probabilities for all the different expressions, emotions and appearance metrics
 detector.addEventListener("onImageResultsSuccess", function(faces, image, timestamp) {
   if (faces.length > 0) {
-    let emotionArray = [];
+    emotionArray = [];
     emotionArray.push(
       {
         emotion: 'joy',
@@ -111,7 +112,11 @@ detector.addEventListener("onImageResultsSuccess", function(faces, image, timest
         max = i;
       }
     }
-    emotionTarget = emotionArray[max].emotion;
+    if(emotionArray[max].val<1){
+        emotionTarget = 'joy';
+    } else{
+      emotionTarget = emotionArray[max].emotion;
+    }
 
   }
 });
