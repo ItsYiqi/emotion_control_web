@@ -584,7 +584,7 @@ function checkEmotion(){
    if(emotionTarget == ''){
      document.getElementById('emotion').innerText = "To be continued...";
    }
-   console.log(emotionArray);
+   // console.log(emotionArray);
 }
 
 setInterval(checkEmotion, 5000);
